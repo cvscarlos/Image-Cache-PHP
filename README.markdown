@@ -11,3 +11,6 @@ A imagem pode ser obtida através de uma url externa ou dentro do próprio domí
     
     // Exemplo imagem em tamanho original
     <img src="<?php $img->printUrl('http://www.exemple.com/img.jpg');?>" alt="imagem" />
+
+Observação:
+Nunca use `$img->getImgData()` antes de `$img->printUrl` ou `$img->getUrl` 
