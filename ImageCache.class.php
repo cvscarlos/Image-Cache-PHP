@@ -122,6 +122,14 @@ class ImageCache
 		}
 
 		$image_p = imagecreatetruecolor($this->width, $this->height);
+
+		// Mantendo as definições de trasnparências da imagem
+		if($imageType == 1 || $imageType == 3)
+		{
+			imagealphablending($image_p, false);
+			imagesavealpha($image_p,true);
+		}
+		
 		switch($imageType)
 		{
 			case 1:
